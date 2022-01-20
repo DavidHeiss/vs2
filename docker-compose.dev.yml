@@ -1,0 +1,82 @@
+services:
+  durchschnittsgeschwindigkeit:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Durchschnittsgeschwindigkeit && while true; do sleep 1s; done;"
+    volumes:
+      - ./Durchschnittsgeschwindigkeit/.vscode:/durchschnittsgeschwindigkeit/.vscode
+      - ./Durchschnittsgeschwindigkeit/src:/durchschnittsgeschwindigkeit/src
+      - ./Libary:/durchschnittsgeschwindigkeit/Libary
+      - ./Durchschnittsgeschwindigkeit/CMakeLists.txt:/durchschnittsgeschwindigkeit/CMakeLists.txt
+      - ./Durchschnittsgeschwindigkeit/conanfile.txt:/durchschnittsgeschwindigkeit/conanfile.txt
+      - ./Durchschnittsgeschwindigkeit/main.cpp:/durchschnittsgeschwindigkeit/main.cpp
+  fuellstand:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Fuellstand && while true; do sleep 1s; done;"
+    volumes:
+      - ./Fuellstand/.vscode:/fuellstand/.vscode
+      - ./Fuellstand/src:/fuellstand/src
+      - ./Libary:/fuellstand/Libary
+      - ./Fuellstand/CMakeLists.txt:/fuellstand/CMakeLists.txt
+      - ./Fuellstand/conanfile.txt:/fuellstand/conanfile.txt
+      - ./Fuellstand/main.cpp:/fuellstand/main.cpp
+  kilometerstand:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Kilometerstand && while true; do sleep 1s; done;"
+    volumes:
+      - ./Kilometerstand/.vscode:/kilometerstand/.vscode
+      - ./Kilometerstand/src:/kilometerstand/src
+      - ./Libary:/kilometerstand/Libary
+      - ./Kilometerstand/CMakeLists.txt:/kilometerstand/CMakeLists.txt
+      - ./Kilometerstand/conanfile.txt:/kilometerstand/conanfile.txt
+      - ./Kilometerstand/main.cpp:/kilometerstand/main.cpp
+  verkehrssituation:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Verkehrssituation && while true; do sleep 1s; done;"
+    volumes:
+      - ./Verkehrssituation/.vscode:/verkehrssituation/.vscode
+      - ./Verkehrssituation/src:/verkehrssituation/src
+      - ./Libary:/verkehrssituation/Libary
+      - ./Verkehrssituation/CMakeLists.txt:/verkehrssituation/CMakeLists.txt
+      - ./Verkehrssituation/conanfile.txt:/verkehrssituation/conanfile.txt
+      - ./Verkehrssituation/main.cpp:/verkehrssituation/main.cpp
+  zentrale:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Zentrale && while true; do sleep 1s; done;"
+    volumes:
+      - ./Zentrale/.vscode:/zentrale/.vscode
+      - ./Zentrale/src:/zentrale/src
+      - ./Libary:/zentrale/Libary
+      - ./Zentrale/CMakeLists.txt:/zentrale/CMakeLists.txt
+      - ./Zentrale/conanfile.txt:/zentrale/conanfile.txt
+      - ./Zentrale/main.cpp:/zentrale/main.cpp
+  server:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Server && while true; do sleep 1s; done;"
+    volumes:
+      - ./Server/.vscode:/server/.vscode
+      - ./Server/src:/server/src
+      - ./Libary:/server/Libary
+      - ./Server/CMakeLists.txt:/server/CMakeLists.txt
+      - ./Server/conanfile.txt:/server/conanfile.txt
+      - ./Server/main.cpp:/server/main.cpp
+  backup:
+    build:
+      target: install
+    command: /bin/sh -c "echo Devcontainer Server && while true; do sleep 1s; done;"
+    volumes:
+      - ./Backup/.vscode:/backup/.vscode
+      - ./Backup/src:/backup/src
+      - ./Libary:/backup/Libary
+      - ./Backup/CMakeLists.txt:/backup/CMakeLists.txt
+      - ./Backup/conanfile.txt:/backup/conanfile.txt
+      - ./Backup/main.cpp:/backup/main.cpp
+  webseite:
+    build:
+      target: install
+    command: /bin/sh -c "echo Do not use a Devcontainer for the website!"

@@ -1,0 +1,9 @@
+[requires]
+nlohmann_json/3.9.1
+gtest/1.10.0
+protobuf/3.13.0
+paho-mqtt-cpp/1.1 
+mongo-cxx-driver/3.6.1
+libpqxx/7.3.0
+[generators]
+cmake

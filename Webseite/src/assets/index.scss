@@ -1,0 +1,8 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.router-link-exact-active {
+  @apply bg-indigo-800;
+  @apply hover:bg-indigo-800;
+}

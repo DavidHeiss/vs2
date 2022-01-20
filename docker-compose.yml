@@ -1,0 +1,103 @@
+version: "3.7"
+services:
+  durchschnittsgeschwindigkeit:
+    container_name: Durchschnittsgeschwindigkeit
+    build:
+      context: .
+      dockerfile: Durchschnittsgeschwindigkeit/Dockerfile
+    depends_on:
+      - zentrale
+      - fuellstand
+      - kilometerstand
+    restart: on-failure
+    environment:
+      type: MQTT
+      send_to: zentrale 
+      interval: 2000
+  fuellstand:
+    container_name: Fuellstand
+    build:
+      context: .
+      dockerfile: Fuellstand/Dockerfile
+    depends_on:
+      - zentrale
+    restart: on-failure
+    environment:
+      type: MQTT
+      send_to: zentrale 
+      interval: 2000
+  kilometerstand:
+    container_name: Kilometerstand
+    build:
+      context: .
+      dockerfile: Kilometerstand/Dockerfile
+    depends_on:
+      - zentrale
+    restart: on-failure
+    environment:
+      type: MQTT
+      send_to: zentrale 
+      interval: 2000
+  verkehrssituation:
+    container_name: Verkehrssituation
+    build:
+      context: .
+      dockerfile: Verkehrssituation/Dockerfile
+    depends_on:
+      - zentrale
+      - durchschnittsgeschwindigkeit
+    restart: on-failure
+    environment:
+      type: MQTT
+      send_to: zentrale 
+      interval: 2000
+  zentrale:
+    container_name: Zentrale
+    build:
+      context: .
+      dockerfile: Zentrale/Dockerfile
+    ports:
+      - 8081:8081
+    depends_on:
+      - server
+    restart: on-failure
+    environment:
+      type: MQTT
+  server:
+    container_name: Server
+    build:
+      context: .
+      dockerfile: Server/Dockerfile
+    restart: on-failure
+  backup:
+    container_name: Backup_Server
+    build:
+      context: .
+      dockerfile: Backup/Dockerfile
+    restart: on-failure
+  webseite:
+    container_name: Webseite
+    build:
+      context: ./webseite
+      dockerfile: Dockerfile
+    depends_on:
+      - zentrale
+    restart: on-failure
+    ports:
+      - 8080:8080
+  mosquitto:
+    container_name: Mosquitto
+    image: eclipse-mosquitto
+    restart: on-failure
+  mongo:
+    container_name: MongoDB
+    image: mongo
+    restart: on-failure 
+    ports:
+      - 27017:27017
+  mongo-backup:
+    container_name: MongoDB_Backup
+    image: mongo
+    restart: on-failure
+    ports:
+      - 27018:27017

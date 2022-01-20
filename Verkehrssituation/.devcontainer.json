@@ -1,0 +1,12 @@
+{
+    "name": "Verkehrssituation",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake"
+    ],
+    "dockerComposeFile": ["../docker-compose.yml", "../docker-compose.dev.yml"],
+    "service": "verkehrssituation",
+    "workspaceFolder": "/verkehrssituation",
+    "shutdownAction": "none"
+}

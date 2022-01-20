@@ -1,0 +1,16 @@
+Webseite/.DS_Store
+Webseite/node_modules
+Webseite//dist
+Webseite/.env.local
+Webseite/.env.*.local
+Webseite/npm-debug.log*
+Webseite/yarn-debug.log*
+Webseite/yarn-error.log*
+Webseite/pnpm-debug.log*
+Webseite/.idea
+Webseite/.vscode
+Webseite/*.suo
+Webseite/*.ntvs*
+Webseite/*.njsproj
+Webseite/*.sln
+Webseite/*.sw?

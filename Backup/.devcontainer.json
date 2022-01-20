@@ -1,0 +1,12 @@
+{
+    "name": "Backup",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake"
+    ],
+    "dockerComposeFile": ["../docker-compose.yml", "../docker-compose.dev.yml"],
+    "service": "backup",
+    "workspaceFolder": "/backup",
+    "shutdownAction": "none"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Durchschnittsgeschwindigkeit",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake"
+    ],
+    "dockerComposeFile": ["../docker-compose.yml", "../docker-compose.dev.yml"],
+    "service": "durchschnittsgeschwindigkeit",
+    "workspaceFolder": "/durchschnittsgeschwindigkeit",
+    "shutdownAction": "none"
+}

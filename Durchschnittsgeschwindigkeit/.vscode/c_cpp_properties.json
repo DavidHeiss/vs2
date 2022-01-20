@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Durchschnittsgeschwindigkeit",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++20",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "~/.conan/data/nlohmann_json/3.9.1/_/_/package/d1091b2ed420e6d287293709a907ae824d5de508/include/**"
+            ],
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

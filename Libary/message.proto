@@ -1,0 +1,183 @@
+syntax = "proto2";
+
+message Durchschnittsgeschwindigkeit {
+    required bool accelerate = 1;
+    required double acceleration = 2;
+    required double average_speed = 3;
+    required double breaking_force = 4;
+    required double distance = 5;
+    required double min_speed = 6;
+    required double max_speed = 7;
+    required double speed = 8;
+    required double start_time = 9;
+    required string type = 10;
+}
+
+message DurchschnittsgeschwindigkeitToHeadquarter {
+    required Durchschnittsgeschwindigkeit data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message DurchschnittsgeschwindigkeitToServer {
+    required DurchschnittsgeschwindigkeitToHeadquarter data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message DurchschnittsgeschwindigkeitFromServer {
+    required DurchschnittsgeschwindigkeitToServer data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+
+message Fuellstand {
+    required double capacity = 1;
+    required double consumption = 2;
+    required double current_capacity = 3;
+    required double last_refueld = 4;
+    required double level = 5;
+    required double ussage = 6;
+    required double will_refill = 7;
+    required string type = 8;
+}
+
+message FuellstandToHeadquarter {
+    required Fuellstand data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message FuellstandToServer {
+    required FuellstandToHeadquarter data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message FuellstandFromServer {
+    required FuellstandToServer data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message Kilometerstand {
+    required double mileage = 1;
+    required string type = 2;
+}
+
+message KilometerstandToHeadquarter {
+    required Kilometerstand data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message KilometerstandToServer {
+    required KilometerstandToHeadquarter data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message KilometerstandFromServer {
+    required KilometerstandToServer data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+    
+
+message Verkehrssituation {
+    required double numeric_value = 1;
+    required bool rising = 2;
+    required string value = 3;
+    required string type = 4;
+}
+
+message VerkehrssituationToHeadquarter {
+    required Verkehrssituation data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message VerkehrssituationToServer {
+    required VerkehrssituationToHeadquarter data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+}
+
+message VerkehrssituationFromServer {
+    required VerkehrssituationToServer data = 1;
+    optional string from_address = 2;
+    optional int32 from_port = 3;
+    optional string to_address = 4;
+    optional int32 to_port = 5;
+    required uint64 send = 6;
+    optional uint64 received = 7;
+    optional uint64 latency = 8;
+    optional uint64 round_trip = 9;
+} 

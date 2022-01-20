@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  durchschnittsgeschwindigkeit:
+    build:
+      target: build
+    command: "/durchschnittsgeschwindigkeit/bin/TestDurchschnittsgeschwindigkeit"
+    restart: "no"
+  fuellstand:
+    build:
+      target: build
+    command: "/fuellstand/bin/TestFuellstand"
+    restart: "no"
+  kilometerstand:
+    build:
+      target: build
+    command: "/kilometerstand/bin/TestKilometerstand"
+    restart: "no"
+  verkehrssituation:
+    build:
+      target: build
+    command: "/verkehrssituation/bin/TestVerkehrssituation"
+    restart: "no"
+  zentrale:
+    command: /bin/sh -c "echo No automated tests! && while true; do sleep 1s; done;"
+  server:
+    command: /bin/sh -c "echo No automated tests! && exit 0"
+  backup:
+    command: /bin/sh -c "echo No automated tests! && exit 0"
+  webseite:
+    command: /bin/sh -c "echo No automated tests! && exit 0"
+  mosquitto:
+    command: /bin/sh -c "echo No automated tests! && exit 0"
+  mongo:
+    command: /bin/sh -c "echo No automated tests! && exit 0"
+  mongo-backup:
+    command: /bin/sh -c "echo No automated tests! && exit 0"
